@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tanvir Ahmmed - Electrical & Electronic Engineering (EEE) Student at Daffodil International University (DIU). Personal portfolio showcasing open-ended laboratory experiments, circuit design, embedded systems, and IEEE leadership.">
+  <meta name="keywords" content="Tanvir Ahmmed, Electrical Electronic Engineering, EEE, Daffodil International University, DIU, 7-Segment Digital Counter, Open-Ended Experiment, Circuits, Embedded Systems, IEEE PES">
+  <meta name="author" content="Tanvir Ahmmed">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Tanvir Ahmmed | Electrical & Electronic Engineering Portfolio">
+  <meta property="og:description" content="Personal engineering portfolio of Tanvir Ahmmed - EEE student at DIU passionate about circuits, embedded systems, and practical laboratory experiments.">
+  <meta property="og:image" content="assets/img/hero-banner.png">
+  <meta property="og:type" content="website">
+
+  <title>Tanvir Ahmmed | Electrical & Electronic Engineering Portfolio</title>
+
+  <!-- Google Fonts: Outfit & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Tech Background Circuit Grid & Ambient Glows -->
+  <div class="tech-bg-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="header-nav" id="header-nav">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Tanvir Ahmmed Portfolio Home">
+        <div class="brand-icon">TA</div>
+        <div class="brand-info">
+          <span class="brand-name">
+            Tanvir Ahmmed
+            <span class="live-indicator" title="Active Student Status"></span>
+          </span>
+          <span class="brand-sub">EEE @ DIU</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#cv" class="nav-link">CV</a></li>
+          <li><a href="#projects" class="nav-link">Projects & Labs</a></li>
+          <li><a href="#workshops" class="nav-link">Workshops</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#journal" class="nav-link">Journal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Dual High-Tech Theme Toggle & Mobile Drawer Toggle) -->
+      <div class="nav-actions">
+        <!-- Dual High-Tech Theme Toggle: Cyber Blue ⇄ Cyber Green -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme Palette" title="Toggle Tech Theme (Blue/Green)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span id="theme-btn-label">Theme</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#cv" class="nav-link">Curriculum Vitae</a>
+      <a href="#projects" class="nav-link">Projects & Labs</a>
+      <a href="#workshops" class="nav-link">Workshops & Certifications</a>
+      <a href="#skills" class="nav-link">Technical Skills</a>
+      <a href="#journal" class="nav-link">Photo Journal</a>
+      <a href="#contact" class="nav-link">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       1. HERO / INTRODUCTION SECTION
+       ======================================================================== -->
+  <section id="home" class="hero-section">
+    <canvas id="hero-circuit-canvas" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0;"></canvas>
+    
+    <div class="container hero-grid" style="position: relative; z-index: 1;">
+      <!-- Hero Left: Personal Introduction & Info -->
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Department of Electrical & Electronic Engineering
+        </div>
+
+        <h1 class="hero-name">
+          Tanvir <span class="hero-name-gradient">Ahmmed</span>
+        </h1>
+
+        <div class="hero-role-tag">
+          Electrical & Electronic Engineering (EEE) Student
+        </div>
+
+        <!-- Academic Institution Bar -->
+        <div class="hero-academic-bar">
+          <div class="academic-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <strong>Daffodil International University (DIU)</strong>
+          </div>
+          <div class="academic-badge">
+            <span>Student ID:</span> <strong>261-33-005</strong>
+          </div>
+        </div>
+
+        <!-- Professional Introduction Statement -->
+        <p class="hero-intro-text">
+          I am an Electrical & Electronic Engineering student passionate about electronics, embedded systems, Microcontrollers, programming, electrical circuits, and practical engineering projects. I am continuously developing my technical skills through laboratory work, projects, workshops, and self-learning.
+        </p>
+
+        <!-- Engineering Specialties -->
+        <div class="hero-specialties">
+          <span class="spec-chip">⚡ Power Systems</span>
+          <span class="spec-chip">🤖 Robotics & Automation</span>
+          <span class="spec-chip">💡 Circuit Design & IoT</span>
+          <span class="spec-chip">🔌 Embedded C & MCU</span>
+        </div>
+
+        <!-- Primary CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            View My Projects & Labs
+          </a>
+
+          <a href="assets/docs/Tanvir_Ahmmed_CV.pdf" download="Tanvir_Ahmmed_CV.pdf" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download My CV
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right: Authentic Portrait Frame with Circuit Tech Card -->
+      <div class="hero-visual">
+        <div class="hero-card-frame">
+          <div class="hero-card-top-bar">
+            <div class="circuit-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>DIU.EEE.261-33-005</span>
+          </div>
+
+          <div class="portrait-wrapper">
+            <img src="assets/img/tanvir-portrait.png" alt="Tanvir Ahmmed - Electrical & Electronic Engineering Student" class="portrait-img">
+            <div class="portrait-glow-ring"></div>
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-chip floating-chip-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span>IEEE PES Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       2. ABOUT ME SECTION
+       ======================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Profile & Background
+        </div>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p class="section-subtitle">
+          Academic foundation, engineering coursework, and technical interests in electrical circuits and embedded systems.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Academic Profile Card -->
+        <div class="profile-card reveal-on-scroll">
+          <div class="card-title-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <h3>Academic Background</h3>
+          </div>
+
+          <div class="edu-timeline">
+            <!-- B.Sc. in EEE -->
+            <div class="edu-item">
+              <div class="edu-title">Bachelor of Science in Electrical and Electronic Engineering</div>
+              <div class="edu-meta">2026 - Present (Expected 2029) | Result: Ongoing</div>
+              <div class="edu-desc"><strong>Daffodil International University (DIU)</strong>, DSC, Birulia, Savar, Dhaka. Medium of Instruction: English.</div>
+            </div>
+
+            <!-- HSC -->
+            <div class="edu-item">
+              <div class="edu-title">Higher Secondary Certificate (HSC) — Science</div>
+              <div class="edu-meta">Passing Year: 2024 | Result: GPA 5.00 out of 5.00</div>
+              <div class="edu-desc">Bangabandhu Ideal School and College, Jamalpur.</div>
+            </div>
+
+            <!-- SSC -->
+            <div class="edu-item">
+              <div class="edu-title">Secondary School Certificate (SSC) — Science</div>
+              <div class="edu-meta">Passing Year: 2022 | Result: GPA 5.00 out of 5.00</div>
+              <div class="edu-desc">Tirutha Sattaypir High School, Jamalpur.</div>
+            </div>
+          </div>
+
+          <!-- Key Graduate Courses -->
+          <div class="courses-box">
+            <div class="courses-title">Key Graduate & Engineering Courses</div>
+            <div class="courses-pills">
+              <span class="course-pill">Electrical Circuits</span>
+              <span class="course-pill">Electronics</span>
+              <span class="course-pill">Electrical Machines</span>
+              <span class="course-pill">Engineering Mathematics</span>
+              <span class="course-pill">Power Systems</span>
+              <span class="course-pill">Control Systems</span>
+              <span class="course-pill">Programming</span>
+              <span class="course-pill">Signal Processing</span>
+              <span class="course-pill">Physics (Electricity & Magnetism)</span>
+              <span class="course-pill">Microprocessors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Co-curricular, Leadership & Profile Details Card -->
+        <div class="profile-card reveal-on-scroll">
+          <div class="card-title-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <h3>Leadership & Personal Profile</h3>
+          </div>
+
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-item-label">Full Name & Student ID</span>
+              <span class="info-item-value">Tanvir Ahmmed | 261-33-005</span>
+            </div>
+            <div class="info-item">
+              <span class="info-item-label">University & Department</span>
+              <span class="info-item-value">Daffodil International University — Dept. of EEE</span>
+            </div>
+            <div class="info-item">
+              <span class="info-item-label">Organizational Role</span>
+              <span class="info-item-value">IEEE PES DIU Student Branch Chapter (Online Presence Management)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-item-label">Contact Location</span>
+              <span class="info-item-value">House #31, Road #06, Block-E, Mirpur-1, Dhaka-1216</span>
+            </div>
+            <div class="info-item">
+              <span class="info-item-label">Languages</span>
+              <span class="info-item-value">Bengali (Native) | English (Professional Working Proficiency)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-item-label">Core Philosophy</span>
+              <span class="info-item-value">Bridging theoretical circuit equations with real-world practical laboratory hardware.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Interests Section -->
+      <div style="margin-top: 3.5rem;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.4rem; color: var(--text-primary);">Major Technical & Engineering Interests</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Core domains of study, hardware prototyping, and active skill development.</p>
+        </div>
+        <div id="interests-grid-container" class="interests-grid">
+          <!-- Dynamically populated from data.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. CURRICULUM VITAE SECTION (Streamlined & Clean)
+       ======================================================================== -->
+  <section id="cv" class="cv-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Academic & Professional Record
+        </div>
+        <h2 class="section-title">Curriculum <span>Vitae</span></h2>
+        <p class="section-subtitle">
+          Directly download my official CV document or view it in a clean full-screen interactive preview.
+        </p>
+      </div>
+
+      <div class="cv-showcase-card reveal-on-scroll">
+        <span class="cv-status-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Official Curriculum Vitae (PDF)
+        </span>
+
+        <h3>Tanvir Ahmmed</h3>
+        <p>
+          Electrical & Electronic Engineering undergraduate student at Daffodil International University (DIU). Access the complete 2-page curriculum vitae covering academic track records, engineering courses, IEEE PES leadership, and verified references.
+        </p>
+
+        <div class="cv-meta-grid">
+          <div class="cv-meta-item">
+            <span class="cv-meta-label">Format</span>
+            <span class="cv-meta-val">PDF (~682 KB)</span>
+          </div>
+          <div class="cv-meta-item">
+            <span class="cv-meta-label">Student ID</span>
+            <span class="cv-meta-val">261-33-005</span>
+          </div>
+          <div class="cv-meta-item">
+            <span class="cv-meta-label">Department</span>
+            <span class="cv-meta-val">EEE, DIU</span>
+          </div>
+          <div class="cv-meta-item">
+            <span class="cv-meta-label">Organization</span>
+            <span class="cv-meta-val">IEEE PES Chapter</span>
+          </div>
+        </div>
+
+        <div class="cv-actions-bar">
+          <!-- Primary Direct Download Button -->
+          <a href="assets/docs/Tanvir_Ahmmed_CV.pdf" download="Tanvir_Ahmmed_CV.pdf" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download My CV
+          </a>
+
+          <!-- View CV in New Tab -->
+          <a href="assets/docs/Tanvir_Ahmmed_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Open CV in New Tab
+          </a>
+
+          <!-- Quick Modal Preview Button -->
+          <button id="preview-cv-modal-btn" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            Quick Preview
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. PROJECTS & LAB WORK SECTION (Open-Ended Experiment Showcase)
+       ======================================================================== -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Practical Engineering Work
+        </div>
+        <h2 class="section-title">Projects & <span>Lab Works</span></h2>
+        <p class="section-subtitle">
+          Open-Ended Laboratory Experiment designing and assembling real hardware circuits in the Electrical & Electronic Engineering laboratory.
+        </p>
+      </div>
+
+      <!-- Projects Grid (Showcasing 7-Segment Digital Counter Open-Ended Experiment) -->
+      <div id="projects-grid-container" class="projects-grid">
+        <!-- Dynamically rendered from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. WORKSHOPS & CERTIFICATIONS SECTION
+       ======================================================================== -->
+  <section id="workshops" class="workshops-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+          Continuous Learning & Events
+        </div>
+        <h2 class="section-title">Workshops & <span>Certifications</span></h2>
+        <p class="section-subtitle">
+          Professional certifications, IEEE executive roles, hands-on technical workshops, and robotics training sessions.
+        </p>
+      </div>
+
+      <!-- Workshops Timeline Container -->
+      <div id="workshops-timeline-container" class="workshops-timeline">
+        <!-- Dynamically populated from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. TECHNICAL SKILLS SECTION
+       ======================================================================== -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Technical Competencies
+        </div>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <p class="section-subtitle">
+          Structured overview of practical hardware, programming, and software proficiencies developed through lab work and projects.
+        </p>
+      </div>
+
+      <div class="skills-categories-grid">
+        <!-- Programming -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h4>Programming</h4>
+          </div>
+          <div id="skills-programming" class="skills-chip-list"></div>
+        </div>
+
+        <!-- Electronics & Embedded -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+            </div>
+            <h4>Electronics & Embedded</h4>
+          </div>
+          <div id="skills-embedded" class="skills-chip-list"></div>
+        </div>
+
+        <!-- Electrical Engineering -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h4>Electrical Engineering</h4>
+          </div>
+          <div id="skills-electrical" class="skills-chip-list"></div>
+        </div>
+
+        <!-- Software & Tools -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h4>Software & Tools</h4>
+          </div>
+          <div id="skills-tools" class="skills-chip-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. PERSONAL BLOG / PHOTO JOURNAL SECTION
+       ======================================================================== -->
+  <section id="journal" class="journal-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          Engineering Story & Memories
+        </div>
+        <h2 class="section-title">Personal Blog & <span>Photo Journal</span></h2>
+        <p class="section-subtitle">
+          Authentic photos and personal reflections from university life, hardware laboratory sessions, and campus milestones.
+        </p>
+      </div>
+
+      <!-- Journal Grid Container -->
+      <div id="journal-grid-container" class="journal-grid">
+        <!-- Dynamically populated from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. CONTACT ME SECTION (Clean Centered Contact Hub)
+       ======================================================================== -->
+  <section id="contact" class="contact-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Get In Touch
+        </div>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <p class="section-subtitle">
+          Feel free to reach out directly via email, phone, or connect on professional social platforms.
+        </p>
+      </div>
+
+      <!-- Centered Direct Contact Hub Cards -->
+      <div class="contact-hub-grid reveal-on-scroll">
+        <!-- Personal Email -->
+        <a href="mailto:ahmmedtanvir53@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </div>
+          <div class="contact-details">
+            <h5>Email Address</h5>
+            <p>ahmmedtanvir53@gmail.com</p>
+          </div>
+        </a>
+
+        <!-- University Email -->
+        <a href="mailto:261-33-005@diu.edu.bd" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <div class="contact-details">
+            <h5>University Email</h5>
+            <p>261-33-005@diu.edu.bd</p>
+          </div>
+        </a>
+
+        <!-- Phone / WhatsApp -->
+        <a href="tel:+8801703478912" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="contact-details">
+            <h5>Phone & WhatsApp</h5>
+            <p>+8801703478912</p>
+          </div>
+        </a>
+
+        <!-- Location -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="contact-details">
+            <h5>Location</h5>
+            <p>Mirpur-1, Dhaka-1216, Bangladesh</p>
+          </div>
+        </div>
+
+        <!-- LinkedIn Profile -->
+        <a href="https://www.linkedin.com/in/tanvir-ahmmed-37525b402" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </div>
+          <div class="contact-details">
+            <h5>LinkedIn Profile</h5>
+            <p>tanvir-ahmmed</p>
+          </div>
+        </a>
+
+        <!-- Facebook Profile -->
+        <a href="https://www.facebook.com/Tanvir.Ahmmed.53" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </div>
+          <div class="contact-details">
+            <h5>Facebook Profile</h5>
+            <p>Tanvir.Ahmmed.53</p>
+          </div>
+        </a>
+
+        <!-- YouTube Channel -->
+        <a href="https://www.youtube.com/channel/UCbZAsGrY-M1Gh_22aR3C9bg" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <div class="contact-details">
+            <h5>YouTube Channel</h5>
+            <p>Tanvir Ahmmed</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Description -->
+        <div class="footer-brand">
+          <h4>Tanvir Ahmmed</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+            Electrical & Electronic Engineering Student<br>
+            Daffodil International University (DIU)
+          </p>
+          <div class="footer-social-bar">
+            <a href="mailto:ahmmedtanvir53@gmail.com" class="social-icon-btn" title="Email Tanvir">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tanvir-ahmmed-37525b402" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.facebook.com/Tanvir.Ahmmed.53" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook Profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UCbZAsGrY-M1Gh_22aR3C9bg" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="YouTube Channel">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#cv">Curriculum Vitae</a></li>
+            <li><a href="#projects">Projects & Labs</a></li>
+            <li><a href="#workshops">Workshops & Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Technical & University Links -->
+        <div class="footer-col">
+          <h5>Portfolio & Academics</h5>
+          <ul class="footer-links">
+            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#journal">Photo Journal</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+            <li><a href="assets/docs/Tanvir_Ahmmed_CV.pdf" download="Tanvir_Ahmmed_CV.pdf">Download CV (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Tanvir Ahmmed. All rights reserved.</span>
+        <span>Electrical & Electronic Engineering | Daffodil International University</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DIALOGS (PROJECT DETAILS, CV VIEWER, LIGHTBOX)
+       ======================================================================== -->
+  
+  <!-- Project Details Modal -->
+  <div id="project-details-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="project-modal-title" class="modal-title">Project & Lab Details</h3>
+        <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div id="project-modal-body" class="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CV Preview Modal -->
+  <div id="cv-preview-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+    <div class="modal-box" style="max-width: 900px; height: 85vh;">
+      <div class="modal-header">
+        <h3 id="cv-modal-title" class="modal-title">Curriculum Vitae Preview — Tanvir Ahmmed</h3>
+        <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-content" style="padding: 0; height: 100%;">
+        <iframe src="assets/docs/Tanvir_Ahmmed_CV.pdf" style="width: 100%; height: 100%; border: none;" title="Tanvir Ahmmed CV Document"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="modal-box" style="max-width: 880px; max-height: 92vh; background: var(--bg-secondary);">
+      <div class="modal-header">
+        <h3 id="lightbox-title" class="modal-title">Circuit & Photo Viewer</h3>
+        <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-content" style="align-items: center; padding: 1.25rem; justify-content: center;">
+        <img id="lightbox-img" src="" alt="Viewer Image" style="max-width: 100%; max-height: 70vh; border-radius: var(--radius-md); object-fit: contain; box-shadow: var(--shadow-lg);">
+        <p id="lightbox-desc" style="font-size: 0.95rem; color: var(--text-secondary); text-align: center; margin-top: 0.85rem; font-weight: 500;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
