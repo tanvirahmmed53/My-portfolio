@@ -146,6 +146,7 @@ const PORTFOLIO_DATA = {
 
   // Technical Interests
   technicalInterests: [
+    { name: "Renewable Energy", icon: "sun", desc: "Solar PV systems, wind power, clean energy integration & sustainability." },
     { name: "Electronics", icon: "cpu", desc: "Semiconductors, analog & digital electronic systems." },
     { name: "Electrical Circuits", icon: "zap", desc: "AC/DC circuit simulation, mesh/nodal analysis, filter design." },
     { name: "Arduino & ESP32", icon: "activity", desc: "Rapid prototyping, embedded C firmware, Wi-Fi/Bluetooth nodes." },

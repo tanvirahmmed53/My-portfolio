@@ -784,6 +784,19 @@ section {
   color: var(--text-muted);
 }
 
+.top-bar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.top-bar-chip svg {
+  color: var(--accent-cyan);
+}
+
 .circuit-dots {
   display: flex;
   gap: 6px;
