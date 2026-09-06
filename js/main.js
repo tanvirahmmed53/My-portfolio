@@ -241,7 +241,7 @@ function renderWorkshops() {
 
   container.innerHTML = PORTFOLIO_DATA.workshops
     .map((ws) => `
-      <div class="workshop-card reveal-on-scroll">
+      <div class="workshop-card reveal-on-scroll" data-ws-id="${ws.id}">
         <div class="workshop-header">
           <div>
             <h4 class="workshop-title">${escapeHTML(ws.title)}</h4>
@@ -268,8 +268,8 @@ function renderWorkshops() {
         </div>
 
         ${ws.certificateAvailable && ws.certificateFile ? `
-          <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
-            <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--success); display: inline-flex; align-items: center; gap: 0.35rem;">
+          <div class="workshop-cert-footer" style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+            <span class="workshop-cert-status" style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--success); display: inline-flex; align-items: center; gap: 0.35rem;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Certificate / Event Document Available
             </span>

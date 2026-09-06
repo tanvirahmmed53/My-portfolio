@@ -163,12 +163,12 @@ const PORTFOLIO_DATA = {
   projects: [
     {
       id: "proj-1",
-      title: "Design & Implementation of a 7-Segment Digital Counter (Open-Ended Experiment)",
-      category: "Digital Electronics Lab",
-      categoryKey: "open-ended",
-      status: "Verified Lab Experiment",
+      title: "Design & Implementation of a 7-Segment Digital Counter",
+      category: "Workshop",
+      categoryKey: "workshop",
+      status: "Workshop Project",
       featured: true,
-      description: "An Open-Ended Laboratory Experiment involving the design, wiring, and testing of a digital counter circuit driving a 7-segment display for sequential numeric counting.",
+      description: "A hands-on engineering project involving the design, wiring, and testing of a digital counter circuit driving a 7-segment display for sequential numeric counting.",
       components: [
         "7-Segment Display (Common Cathode/Anode)",
         "Digital Counter IC / BCD Decoder",
