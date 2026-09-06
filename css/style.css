@@ -5,7 +5,7 @@
    ========================================================================== */
 
 /* --- CSS Variables & Theme Tokens --- */
-:root {
+/*:root {
   /* Default Dark Theme: Cyber Blue / Electric Cyan */
   --bg-primary: #080e1a;
   --bg-secondary: #0f1a2e;
@@ -13,7 +13,18 @@
   --bg-card: rgba(15, 26, 46, 0.88);
   --bg-card-hover: rgba(22, 36, 63, 0.95);
   --bg-glass: rgba(8, 14, 26, 0.82);
-  --bg-input: #111d33;
+  --bg-input: #111d33;*/
+
+:root[data-theme="purple-dark"] {
+  --bg-main: #0c0916;
+  --bg-card: #151024;
+  --bg-tertiary: #1e1733;
+  --text-primary: #f3f0ff;
+  --text-secondary: #b8b2d1;
+  --accent-cyan: #a855f7; /* Accent color jeta change korben */
+  --accent-glow: rgba(168, 85, 247, 0.3);
+  --border-subtle: #2d224d;
+}
 
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
