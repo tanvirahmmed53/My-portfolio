@@ -353,9 +353,6 @@ function renderJournal() {
           </div>
           <h4 class="journal-title">${escapeHTML(item.title)}</h4>
           <p class="journal-story">${escapeHTML(item.story)}</p>
-          <div class="journal-tags">
-            ${(item.tags || []).map(t => `<span class="chip chip-accent">#${escapeHTML(t)}</span>`).join('')}
-          </div>
         </div>
       </div>
     `)
