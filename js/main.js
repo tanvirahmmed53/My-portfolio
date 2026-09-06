@@ -16,32 +16,52 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================================================
-   1. THEME TOGGLE (CYBER BLUE ⇄ CYBER GREEN DARK THEMES)
+   1. THEME TOGGLE (CYBER BLUE ⇄ CYBER GREEN ⇄ CYBER PURPLE)
    ========================================================================== */
 function initThemeToggle() {
   const themeBtn = document.getElementById("theme-toggle-btn");
   const themeLabel = document.getElementById("theme-btn-label");
   const storedTheme = localStorage.getItem("tanvir-portfolio-theme");
 
-  // Default to cyber blue (dark) unless user previously selected green-dark
-  const initialTheme = storedTheme === "green-dark" ? "green-dark" : "dark";
+  // Supported themes
+  const themes = ["dark", "green-dark", "purple-dark"];
+  
+  // Default to stored theme or 'dark' (Cyber Blue)
+  const initialTheme = themes.includes(storedTheme) ? storedTheme : "dark";
   document.documentElement.setAttribute("data-theme", initialTheme);
   updateThemeButton(initialTheme);
 
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const nextTheme = currentTheme === "green-dark" ? "dark" : "green-dark";
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+      let currentIndex = themes.indexOf(currentTheme);
+      if (currentIndex === -1) currentIndex = 0;
+      
+      const nextIndex = (currentIndex + 1) % themes.length;
+      const nextTheme = themes[nextIndex];
+      
       document.documentElement.setAttribute("data-theme", nextTheme);
       localStorage.setItem("tanvir-portfolio-theme", nextTheme);
       updateThemeButton(nextTheme);
-      showToast(`Switched to ${nextTheme === "green-dark" ? "CYBER GREEN" : "CYBER BLUE"} mode`);
+      
+      const themeNames = {
+        "dark": "CYBER BLUE",
+        "green-dark": "CYBER GREEN",
+        "purple-dark": "CYBER PURPLE"
+      };
+      showToast(`Switched to ${themeNames[nextTheme]} mode`);
     });
   }
 
   function updateThemeButton(theme) {
     if (themeLabel) {
-      themeLabel.textContent = theme === "green-dark" ? "Cyber Green" : "Cyber Blue";
+      if (theme === "green-dark") {
+        themeLabel.textContent = "Cyber Green";
+      } else if (theme === "purple-dark") {
+        themeLabel.textContent = "Cyber Purple";
+      } else {
+        themeLabel.textContent = "Cyber Blue";
+      }
     }
   }
 }
@@ -525,9 +545,17 @@ function initHeroCanvas() {
   function draw() {
     ctx.clearRect(0, 0, width, height);
 
-    const isGreen = document.documentElement.getAttribute("data-theme") === "green-dark";
-    const nodeColor = isGreen ? "rgba(0, 255, 157, 0.45)" : "rgba(0, 210, 255, 0.45)";
-    const lineColor = isGreen ? "rgba(0, 255, 157, 0.1)" : "rgba(0, 210, 255, 0.1)";
+    const theme = document.documentElement.getAttribute("data-theme");
+    let nodeColor = "rgba(0, 210, 255, 0.45)";
+    let lineColor = "rgba(0, 210, 255, 0.1)";
+
+    if (theme === "green-dark") {
+      nodeColor = "rgba(0, 255, 157, 0.45)";
+      lineColor = "rgba(0, 255, 157, 0.1)";
+    } else if (theme === "purple-dark") {
+      nodeColor = "rgba(192, 132, 252, 0.5)";
+      lineColor = "rgba(192, 132, 252, 0.12)";
+    }
 
     // Update & draw particles
     for (let i = 0; i < particles.length; i++) {
