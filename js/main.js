@@ -23,8 +23,8 @@ function initThemeToggle() {
   const themeLabel = document.getElementById("theme-btn-label");
   const storedTheme = localStorage.getItem("tanvir-portfolio-theme");
 
-  // Supported themes sequence: Cyber Blue (dark) -> Light Mode (light) -> Cyber Green (green-dark)
-  const themes = ["dark", "light", "green-dark"];
+  // Supported themes: Cyber Blue (dark) & Light Mode (light)
+  const themes = ["dark", "light"];
   
   // Default to stored theme or 'dark' (Cyber Blue)
   const initialTheme = themes.includes(storedTheme) ? storedTheme : "dark";
@@ -46,8 +46,7 @@ function initThemeToggle() {
       
       const themeNames = {
         "dark": "CYBER BLUE",
-        "light": "LIGHT MODE",
-        "green-dark": "CYBER GREEN"
+        "light": "LIGHT MODE"
       };
       showToast(`Switched to ${themeNames[nextTheme]}`);
     });
@@ -57,8 +56,6 @@ function initThemeToggle() {
     if (themeLabel) {
       if (theme === "light") {
         themeLabel.textContent = "Light Mode";
-      } else if (theme === "green-dark") {
-        themeLabel.textContent = "Cyber Green";
       } else {
         themeLabel.textContent = "Cyber Blue";
       }
