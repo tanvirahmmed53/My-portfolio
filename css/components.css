@@ -573,6 +573,38 @@
   word-break: break-word;
 }
 
+.contact-details p a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-details p a:hover {
+  color: var(--accent-cyan);
+}
+
+.email-contact-card {
+  grid-column: 1 / -1;
+}
+
+.email-dual-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.email-item {
+  flex: 1;
+}
+
+.email-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border-subtle);
+}
+
 /* ==========================================================================
    7. MODAL DIALOGS & LIGHTBOX
    ========================================================================== */
@@ -824,6 +856,17 @@
     text-align: center;
     align-items: center;
     min-width: 0;
+  }
+
+  .email-dual-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .email-divider {
+    width: 80%;
+    height: 1px;
+    margin: 0.2rem auto;
   }
 
   .contact-details {
